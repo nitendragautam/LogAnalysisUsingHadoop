@@ -1,4 +1,4 @@
-package com.nitendragautam.project;
+package com.nitendragautam.project.main;
 
 public class Main {
 
