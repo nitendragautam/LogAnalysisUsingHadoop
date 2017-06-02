@@ -38,7 +38,7 @@ public class AccessLogsParser {
 
     private AccessLogRecord buildAccessLogRecord(Matcher matcher){
         return new AccessLogRecord(
-                matcher.group(1),
+                matcher.group(1), //Client IP address
                 matcher.group(2),
                 matcher.group(3),
                 matcher.group(4),
