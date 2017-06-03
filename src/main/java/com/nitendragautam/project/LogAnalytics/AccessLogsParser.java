@@ -1,4 +1,4 @@
-package com.nitendragautam.project.services;
+package com.nitendragautam.project.LogAnalytics;
 
 import org.apache.commons.lang3.tuple.ImmutableTriple;
 import org.apache.commons.lang3.tuple.Triple;

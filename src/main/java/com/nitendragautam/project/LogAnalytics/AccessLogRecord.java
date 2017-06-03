@@ -1,4 +1,4 @@
-package com.nitendragautam.project.services;
+package com.nitendragautam.project.LogAnalytics;
 
 
 public class AccessLogRecord {

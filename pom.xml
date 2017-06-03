@@ -57,7 +57,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.nitendragautam.project.main.Main</mainClass>
+                            <mainClass>com.nitendragautam.project.LogAnalytics.LogAnalytics</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
