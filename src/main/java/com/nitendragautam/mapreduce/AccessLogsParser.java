@@ -1,4 +1,4 @@
-package com.nitendragautam.project.LogAnalytics;
+package com.nitendragautam.mapreduce;
 
 import org.apache.commons.lang3.tuple.ImmutableTriple;
 import org.apache.commons.lang3.tuple.Triple;

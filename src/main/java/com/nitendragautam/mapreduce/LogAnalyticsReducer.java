@@ -1,4 +1,4 @@
-package com.nitendragautam.project.LogAnalytics;
+package com.nitendragautam.mapreduce;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -23,9 +23,8 @@ int sumOfIPAddressOccurance = 0;
 //Iterating every IP address
 
         for (IntWritable val : values) {
-
-            sumOfIPAddressOccurance += val.get(); //Counts the add the occurence of every Ip Address
-
+//Counts the add the occurence of every Ip Address
+            sumOfIPAddressOccurance += val.get();
         }
         result.set(sumOfIPAddressOccurance);
         context.write(key ,result);

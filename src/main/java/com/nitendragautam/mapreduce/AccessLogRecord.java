@@ -1,4 +1,4 @@
-package com.nitendragautam.project.LogAnalytics;
+package com.nitendragautam.mapreduce;
 
 
 public class AccessLogRecord {
