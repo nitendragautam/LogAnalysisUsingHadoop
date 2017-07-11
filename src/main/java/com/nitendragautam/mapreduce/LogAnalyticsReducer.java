@@ -28,7 +28,8 @@ int sumOfIPAddressOccurance = 0;
         }
         result.set(sumOfIPAddressOccurance);
         context.write(key ,result);
+        Long tapiEnd = System.currentTimeMillis()/1000;
+        System.out.println("Hadoop MapReduce Job End Time in Second: " +tapiEnd);
     }
-
 
 }
