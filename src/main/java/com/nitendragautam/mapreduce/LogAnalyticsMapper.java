@@ -26,6 +26,7 @@ public class LogAnalyticsMapper extends
 
         Long tapiStart = System.currentTimeMillis()/1000;
         System.out.println("Hadoop MapReduce Job Start Time in Seconds: " +tapiStart);
+        System.out.println("Hadoop MapReduce Job Start Time: " +DateUtility.getTodaysDate());
         String logRecord = value.toString();
 
         AccessLogRecord accessLogRecord =
