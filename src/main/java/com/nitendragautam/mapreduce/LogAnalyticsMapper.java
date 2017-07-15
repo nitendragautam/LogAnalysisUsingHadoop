@@ -24,10 +24,7 @@ public class LogAnalyticsMapper extends
     public void map(Object key, Text value, Context context)
             throws IOException, InterruptedException {
 
-        Long tapiStart = System.currentTimeMillis()/1000;
-        System.out.println("Hadoop MapReduce Job Start Time in Seconds: " +tapiStart);
-        System.out.println("Hadoop MapReduce Job Start Time: " +DateUtility.getTodaysDate());
-        String logRecord = value.toString();
+          String logRecord = value.toString();
 
         AccessLogRecord accessLogRecord =
                 accessLogsParser.parseAccessLogs(logRecord);
