@@ -9,9 +9,10 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 /*
-Defins the Job Config for MapReduce Job
+Defines the Job Config for MapReduce Job and
+is main entry Point
  */
-public class LogAnalytics {
+public class LogAnalyticsHadoop {
 
     public static void main(String args[]) throws Exception{
 
@@ -20,8 +21,8 @@ Path outputPath = new Path(args[1]);
 
 Configuration conf = new Configuration(); //Hadoop Config
 
-        Job mapreduceJob = Job.getInstance(conf ,"LogAnalytics");
-        mapreduceJob.setJarByClass(LogAnalytics.class);
+        Job mapreduceJob = Job.getInstance(conf ,"LogAnalyticsHadoop");
+        mapreduceJob.setJarByClass(LogAnalyticsHadoop.class);
         mapreduceJob.setMapperClass(LogAnalyticsMapper.class);
         mapreduceJob.setCombinerClass(LogAnalyticsReducer.class);
         mapreduceJob.setReducerClass(LogAnalyticsReducer.class);

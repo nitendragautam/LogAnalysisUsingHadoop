@@ -10,24 +10,24 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by nitendragautam on 5/27/2017.
+ *
  */
 public class AccessLogsParser {
-/*
+/**
     Parses the Access Logs by Passing Single line
     Input is the single line of Log Record in combined Log Format
     output is the Access Record Object
      */
 
-    public AccessLogRecord parseAccessLogs(String logRecord){
-        AccessLogRecord accessLogRecord =null;
+    public AccessLogsRecord parseAccessLogs(String logRecord){
+        AccessLogsRecord accessLogRecord =null;
         Pattern pattern = getLogsPattern(); //Gets the Access Logs Pattern
         Matcher regexMatcher =pattern.matcher(logRecord);
         if(regexMatcher.find()==true){ //If Pattern is Macthed
             accessLogRecord = buildAccessLogRecord(regexMatcher);
         }else{ //Return Null Access Log Record
 
-            accessLogRecord=new AccessLogRecord("","","","","","","","","");
+            accessLogRecord=new AccessLogsRecord("","","","","","","","","");
         }
 
         return accessLogRecord;
@@ -36,8 +36,8 @@ public class AccessLogsParser {
 
 
 
-    private AccessLogRecord buildAccessLogRecord(Matcher matcher){
-        return new AccessLogRecord(
+    private AccessLogsRecord buildAccessLogRecord(Matcher matcher){
+        return new AccessLogsRecord(
                 matcher.group(1), //Client IP address
                 matcher.group(2),
                 matcher.group(3),
@@ -54,7 +54,7 @@ public class AccessLogsParser {
      passed Paramater :Http Request Field like "GET /history/skylab/skylab-small.gif HTTP/1.0"
      *returns a Tuple of (requestType ,uri ,httpVersion)
      */
-    public Triple parseHttpRequestField(String httpRequest){
+    public Triple getHttpRequestField(String httpRequest){
         Triple triple;
         String splittedArray[] =httpRequest.split(" ");//Split the Request based on Empty Space
         if(splittedArray.length ==3){
@@ -66,10 +66,10 @@ public class AccessLogsParser {
     }
 
     /*
-    Parses the Date Field eg : "[21/Jun/2010:02:48:13 -0700]"
+    Parses the Date Field eg : "[21/May/2017:02:48:13 -0700]"
     and gives the epoch time
      */
-    public String  parseDateField(String dateField){
+    public String getDateField(String dateField){
         String dateFormat = "([\\w:/]+\\s[+\\-]\\d{4})";
         String parsedDate=null;
         Pattern datePattern = Pattern.compile(dateFormat); //Using

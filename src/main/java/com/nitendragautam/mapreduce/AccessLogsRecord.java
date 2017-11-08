@@ -1,7 +1,7 @@
 package com.nitendragautam.mapreduce;
 
 
-public class AccessLogRecord {
+public class AccessLogsRecord {
     private String clientAddress;  //ip address or hostName of the client
     private String clientIdentity; //Generally '-'
     private String remoteUser; //Generally '-'
@@ -12,15 +12,15 @@ public class AccessLogRecord {
     private String siteReferer;  //Vistors Source
     private String userAgent; //Type of Browser Used
 
-    public AccessLogRecord(String clientAddress ,
-                           String clientIdentity ,
-                           String remoteUser,
-                           String dateTime,
-                           String httpRequest,
-                           String httpStatusCode,
-                           String bytesSent,
-                           String siteReferer,
-                           String userAgent){
+    public AccessLogsRecord(String clientAddress ,
+                            String clientIdentity ,
+                            String remoteUser,
+                            String dateTime,
+                            String httpRequest,
+                            String httpStatusCode,
+                            String bytesSent,
+                            String siteReferer,
+                            String userAgent){
         this.clientAddress = clientAddress;
         this.clientIdentity =clientIdentity;
         this.remoteUser=remoteUser;
