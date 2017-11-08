@@ -20,8 +20,8 @@ Path outputPath = new Path(args[1]);
 
 Configuration conf = new Configuration(); //Hadoop Config
 
-            Job mapreduceJob = Job.getInstance(conf ,"LogAnalytics");
-       mapreduceJob.setJarByClass(LogAnalytics.class);
+        Job mapreduceJob = Job.getInstance(conf ,"LogAnalytics");
+        mapreduceJob.setJarByClass(LogAnalytics.class);
         mapreduceJob.setMapperClass(LogAnalyticsMapper.class);
         mapreduceJob.setCombinerClass(LogAnalyticsReducer.class);
         mapreduceJob.setReducerClass(LogAnalyticsReducer.class);
