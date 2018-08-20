@@ -21,13 +21,17 @@ public class LogAnalyticsReducer extends
 int sumOfIPAddressOccurance = 0;
 
 //Iterating every IP address
+/**Result of the Reducer
+         *  (192.134.56.71 ,1)
+         *  (192.135.68.72, 2)
+         */
 
         for (IntWritable val : values) {
-//Counts the add the occurence of every Ip Address
+  //Count and Add the Occurance of Every Ip Address
             sumOfIPAddressOccurance += val.get();
         }
         result.set(sumOfIPAddressOccurance);
-        context.write(key ,result);
+        context.write(key ,result);  // Writes the Results back to HDFS 
 
     }
 

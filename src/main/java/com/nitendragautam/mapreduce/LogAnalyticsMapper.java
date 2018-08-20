@@ -9,9 +9,14 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
 /**
-Mapper Class which takes log line as Input and Parses it
-
+ * Mapper Class which parses the Log line and Gives Output as Key/Value Pair for Each Key
+ * Input for the Mapper will be the Log Line
+ * Here Key will be different IP Address and Value will be their count (1)
+ * Output : IP_ADDRESS,1
+ *
+ *
  */
+ 
 public class LogAnalyticsMapper extends
         Mapper<Object, Text, Text, IntWritable> {
 
@@ -28,8 +33,11 @@ public class LogAnalyticsMapper extends
 
         AccessLogsRecord accessLogRecord =
                 accessLogsParser.parseAccessLogs(logRecord);
-         //Parsing the IP address and setting the count of IP address as one
+         //Parsing the Log Record to get the IP Address and Setting count of IP Address as one
         context.write(new Text(accessLogRecord.getClientAddress()), clientAddressCount);
+
+        //Through Context.Write Output from this Mapper will be passed to Reducer as Intermediate Key/Value Pairs
+  
 
     }
 

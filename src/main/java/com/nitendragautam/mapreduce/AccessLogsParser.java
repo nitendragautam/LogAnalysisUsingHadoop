@@ -9,9 +9,6 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- *
- */
 public class AccessLogsParser {
 /**
     Parses the Access Logs by Passing Single line
