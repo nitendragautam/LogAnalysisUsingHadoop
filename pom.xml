@@ -8,7 +8,7 @@
     <artifactId>loganalyticshadoop</artifactId>
     <version>1</version>
     <properties>
-<hadoop.version>2.8.0</hadoop.version>
+<hadoop.version>2.10.1</hadoop.version>
         <apache.common>3.5</apache.common>
 
 
